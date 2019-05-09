@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/08/05/DFS%20AOJ-0118%20Property%20Distribution/</loc>
+    
+    <lastmod>2019-05-09T04:11:19.298Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/08/29/ACM-ICPC%202018%20%E5%8D%97%E4%BA%AC%E8%B5%9B%E5%8C%BA%E7%BD%91%E7%BB%9C%E9%A2%84%E8%B5%9B%20%E9%A2%98%E8%A7%A3/</loc>
     
     <lastmod>2018-08-29T02:38:46.997Z</lastmod>
@@ -82,13 +89,6 @@
     <loc>http://yoursite.com/2018/08/05/BFS%20Aizu%20-%200558%20%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8BCheese/</loc>
     
     <lastmod>2018-08-05T07:28:34.161Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/08/05/DFS%20AOJ-0118%20Property%20Distribution/</loc>
-    
-    <lastmod>2018-08-05T07:19:02.786Z</lastmod>
     
   </url>
   
