@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="mfdy&#39;s blog">
 <meta property="og:description" content="Python序列 本文章总结了董付国老师的Pthon程序设计(第2版)书的内容，仅供个人学习使用，如有侵权，立刻删除    by：mfdy 2.1 列表2.1.1 列表的创建与删除123a_list = [&apos;a&apos;, &apos;b&apos;, &apos;mpilgrim&apos;, &apos;z&apos;, &apos;example&apos;].a_list = []# 创建空列表 或者是用list()函数将元组、range对象、字符串或者其他类型的可迭代对象类">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-11T13:41:34.607Z">
+<meta property="og:updated_time" content="2019-05-11T14:01:52.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python序列">
 <meta name="twitter:description" content="Python序列 本文章总结了董付国老师的Pthon程序设计(第2版)书的内容，仅供个人学习使用，如有侵权，立刻删除    by：mfdy 2.1 列表2.1.1 列表的创建与删除123a_list = [&apos;a&apos;, &apos;b&apos;, &apos;mpilgrim&apos;, &apos;z&apos;, &apos;example&apos;].a_list = []# 创建空列表 或者是用list()函数将元组、range对象、字符串或者其他类型的可迭代对象类">
@@ -495,12 +495,99 @@
 </ol>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">13</span>, <span class="number">12</span>, <span class="number">11</span>]</span><br><span class="line">aList.reverse()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aList</span><br><span class="line">[<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
 <ol start="4">
-<li><p>reversed(): 翻转并返回迭代对象</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"><span class="comment"># 返回reversed对象</span></span><br><span class="line">bList = reversed(aList)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bList</span><br><span class="line">&lt;list_reverseiterator object at <span class="number">0x0000011BE35B86D8</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把reversed对象转换成列表</span></span><br><span class="line">bList = list(bList)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bList</span><br><span class="line">[<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">13</span>, <span class="number">12</span>, <span class="number">11</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> bList:</span><br><span class="line">    print(i, end=<span class="string">' '</span>)</span><br><span class="line"><span class="comment"># 没有输出内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新创建reversed对象</span></span><br><span class="line">bList = reversed(aList)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> bList:</span><br><span class="line">    print(i, end=<span class="string">' '</span>)</span><br><span class="line"><span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">13</span> <span class="number">12</span> <span class="number">11</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>reversed(): 翻转并返回迭代对象</li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">11</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"><span class="comment"># 返回reversed对象</span></span><br><span class="line">bList = reversed(aList)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bList</span><br><span class="line">&lt;list_reverseiterator object at <span class="number">0x0000011BE35B86D8</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把reversed对象转换成列表</span></span><br><span class="line">bList = list(bList)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bList</span><br><span class="line">[<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">13</span>, <span class="number">12</span>, <span class="number">11</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> bList:</span><br><span class="line">    print(i, end=<span class="string">' '</span>)</span><br><span class="line"><span class="comment"># 没有输出内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新创建reversed对象</span></span><br><span class="line">bList = reversed(aList)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> bList:</span><br><span class="line">    print(i, end=<span class="string">' '</span>)</span><br><span class="line"><span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">13</span> <span class="number">12</span> <span class="number">11</span></span><br></pre></td></tr></table></figure>
 <p>reversed（）返回的是一个迭代器对象，只能进行一次循环遍历。显示一次所包含的值！</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="2-1-8-列表常用内置函数"><a href="#2-1-8-列表常用内置函数" class="headerlink" title="2.1.8 列表常用内置函数"></a>2.1.8 列表常用内置函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list.append(x)</td>
+<td>将元素x添加至列表尾部</td>
+</tr>
+<tr>
+<td>list.extend(x)</td>
+<td>将列表L中的所有元素添加值列表尾部</td>
+</tr>
+<tr>
+<td>list.insert(index, x) &emsp;</td>
+<td>在列表指定位置index处添加元素x，该位置后面的所有元素后移一个位置</td>
+</tr>
+<tr>
+<td>list.remove(x)</td>
+<td>在列表中删除首次出现的元素x，该元素之后的所有元素前移一个位置</td>
+</tr>
+<tr>
+<td>list.pop([index])</td>
+<td>删除并返回列表中下标为index（默认为-1）的元素</td>
+</tr>
+<tr>
+<td>list.clear()</td>
+<td>删除列表中所有元素，但保留列表对象</td>
+</tr>
+<tr>
+<td>list.index(x)</td>
+<td>返回列表中第一个值为x的元素的下标，若不存在值为x的元素则抛出异常</td>
+</tr>
+<tr>
+<td>list.count(x)</td>
+<td>返回指定元素x在列表中的出现次数</td>
+</tr>
+<tr>
+<td>list.reverse()</td>
+<td>对列表lst所有元素进行逆序</td>
+</tr>
+<tr>
+<td>list.sort()</td>
+<td>对列表lst中的元素进行排序，key用来指定排序依据，reverse决定升序(False)还是降序(True)</td>
+</tr>
+<tr>
+<td>list.copy()</td>
+<td>返回列表lst的浅复制</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len(list)</td>
+<td>返回列表中的元素个数，适用于元组、字典、集合、字符串等</td>
+</tr>
+<tr>
+<td>max(list)</td>
+<td>返回列表中的最大元素，适用于元组、字典、集合、字符串等</td>
+</tr>
+<tr>
+<td>len(list)</td>
+<td>返回列表中的最小元素，适用于元组、字典、集合、字符串等</td>
+</tr>
+<tr>
+<td>sum(list)</td>
+<td>对列表的元素进行求和运算，对非数值型列表运算需要指定start参数，同样适用于元组、range</td>
+</tr>
+<tr>
+<td>zip()</td>
+<td>返回可迭代的zip对象</td>
+</tr>
+<tr>
+<td>enumerate(list)&emsp;</td>
+<td>枚举列表元素，返回枚举对象，其中每个元素为包含下标和值的元组。该函数对元组、字符串同样有效。</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sum()</span></span><br><span class="line">  <span class="comment"># sum()函数的start参数默认为0</span></span><br><span class="line">  &gt;&gt;&gt; sum(range(<span class="number">1</span>, <span class="number">11</span>))</span><br><span class="line">  <span class="number">55</span></span><br><span class="line">  <span class="comment"># 指定start参数为5，等价于5+sum(range(1,11))</span></span><br><span class="line">  &gt;&gt;&gt; sum(range(<span class="number">1</span>, <span class="number">11</span>), <span class="number">5</span>)</span><br><span class="line">  <span class="number">60</span></span><br><span class="line">  <span class="comment">#这个操作占用空间较大，慎用</span></span><br><span class="line">  &gt;&gt;&gt; sum([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>], [<span class="number">4</span>]], [])</span><br><span class="line">  [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># zip()</span></span><br><span class="line">  aList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">  bList = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">  cList = zip(a, b)</span><br><span class="line">  <span class="comment"># 返回zip对象</span></span><br><span class="line">  &gt;&gt;&gt; cList</span><br><span class="line">  &lt;zip object at <span class="number">0x0000000003728908</span>&gt;</span><br><span class="line">  <span class="comment"># 把zip对象转换成列表</span></span><br><span class="line">  &gt;&gt;&gt; list(cList)</span><br><span class="line">  [(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># enumerate()</span></span><br><span class="line">  <span class="keyword">for</span> item <span class="keyword">in</span> enumerate(<span class="string">'abcdef'</span>):</span><br><span class="line">  	print(item)</span><br><span class="line">  (<span class="number">0</span>, <span class="string">'a'</span>)</span><br><span class="line">  (<span class="number">1</span>, <span class="string">'b'</span>)</span><br><span class="line">  (<span class="number">2</span>, <span class="string">'c'</span>)</span><br><span class="line">  (<span class="number">3</span>, <span class="string">'d'</span>)</span><br><span class="line">  (<span class="number">4</span>, <span class="string">'e'</span>)</span><br><span class="line">  (<span class="number">5</span>, <span class="string">'f'</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -736,7 +823,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python序列"><span class="nav-number">1.</span> <span class="nav-text">Python序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-列表"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-列表的创建与删除"><span class="nav-number">1.1.1.</span> <span class="nav-text">2.1.1 列表的创建与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-列表元素的增加"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.1.2 列表元素的增加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-列表元素的删除"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.1.3 列表元素的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-列表元素访问与计数"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.1.4 列表元素访问与计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-成员资格判断"><span class="nav-number">1.1.5.</span> <span class="nav-text">2.1.5 成员资格判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#★2-1-6-切片操作"><span class="nav-number">1.1.6.</span> <span class="nav-text">★2.1.6 切片操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-列表排序"><span class="nav-number">1.1.7.</span> <span class="nav-text">2.1.7 列表排序</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python序列"><span class="nav-number">1.</span> <span class="nav-text">Python序列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-列表"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-列表的创建与删除"><span class="nav-number">1.1.1.</span> <span class="nav-text">2.1.1 列表的创建与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-列表元素的增加"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.1.2 列表元素的增加</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-列表元素的删除"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.1.3 列表元素的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-列表元素访问与计数"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.1.4 列表元素访问与计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-成员资格判断"><span class="nav-number">1.1.5.</span> <span class="nav-text">2.1.5 成员资格判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#★2-1-6-切片操作"><span class="nav-number">1.1.6.</span> <span class="nav-text">★2.1.6 切片操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-7-列表排序"><span class="nav-number">1.1.7.</span> <span class="nav-text">2.1.7 列表排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-8-列表常用内置函数"><span class="nav-number">1.1.8.</span> <span class="nav-text">2.1.8 列表常用内置函数</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
