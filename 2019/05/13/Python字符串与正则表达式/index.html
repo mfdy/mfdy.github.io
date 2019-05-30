@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="Python字符串与正则表达式">
+<meta name="description" content="Python字符串与正则表达式 &amp;emsp;&amp;emsp;UTF-8对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以3个字节表示中文，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。&amp;emsp;&amp;emsp;GB2312是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python字符串与正则表达式">
 <meta property="og:url" content="http://yoursite.com/2019/05/13/Python字符串与正则表达式/index.html">
 <meta property="og:site_name" content="mfdy&#39;s blog">
-<meta property="og:description" content="Python字符串与正则表达式">
+<meta property="og:description" content="Python字符串与正则表达式 &amp;emsp;&amp;emsp;UTF-8对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以3个字节表示中文，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。&amp;emsp;&amp;emsp;GB2312是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-24T14:32:12.998Z">
+<meta property="og:updated_time" content="2019-05-30T04:38:49.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python字符串与正则表达式">
-<meta name="twitter:description" content="Python字符串与正则表达式">
+<meta name="twitter:description" content="Python字符串与正则表达式 &amp;emsp;&amp;emsp;UTF-8对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以3个字节表示中文，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。&amp;emsp;&amp;emsp;GB2312是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编">
 
 
 
@@ -434,7 +434,87 @@
       
 
       
-        <h1 id="Python字符串与正则表达式"><a href="#Python字符串与正则表达式" class="headerlink" title="Python字符串与正则表达式"></a><center>Python字符串与正则表达式</center></h1>
+        <h1 id="Python字符串与正则表达式"><a href="#Python字符串与正则表达式" class="headerlink" title="Python字符串与正则表达式"></a><center>Python字符串与正则表达式</center></h1><hr>
+<p>&emsp;&emsp;UTF-8对全世界所有国家需要用到的字符进行了编码，以1个字节表示英语字符(兼容ASCII)，以3个字节表示中文，还有些语言的符号使用2个字节（例如俄语和希腊语符号）或4个字节。<br>&emsp;&emsp;GB2312是我国制定的中文编码，使用1个字节表示英语，2个字节表示中文；GBK是GB2312的扩充，而CP936是微软在GBK基础上开发的编码方式。GB2312、GBK和CP936都是使用2个字节表示中文。</p>
+<p>&emsp;&emsp;不同编码格式之间相差很大，采用不同的编码格式意味着不同的表示和存储形式，把同一字符存入文件时，写入的内容可能会不同，在试图理解其内容时必须了解编码规则并进行正确的解码。如果解码方法不正确就无法还原信息，从这个角度来讲，字符串编码也具有加密的效果。</p>
+<p>&emsp;&emsp;Python 3.x完全支持中文字符，默认使用UTF8编码格式，无论是一个数字、英文字母，还是一个汉字，都按一个字符对待和处理。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'中国山东烟台'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</span><br><span class="line"><span class="number">6</span></span><br><span class="line"></span><br><span class="line">s = <span class="string">'中国山东烟台ABCDE'</span>  </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</span><br><span class="line"></span><br><span class="line">姓名 = <span class="string">'张三'</span> </span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>print(姓名)</span><br><span class="line">张三</span><br></pre></td></tr></table></figure>
+<h2 id="4-1-字符串"><a href="#4-1-字符串" class="headerlink" title="4.1 字符串"></a>4.1 字符串</h2><p>&emsp;&emsp;在Python中，字符串属于不可变序列类型，除了支持序列通用方法（包括分片操作）以外，还支持特有的字符串操作方法。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">teststring = <span class="string">'good'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(teststring)</span><br><span class="line"><span class="number">3056036964032</span></span><br><span class="line"></span><br><span class="line">teststring[<span class="number">0</span>] = <span class="string">'w'</span></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"1.py"</span>, line <span class="number">3</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    teststring[<span class="number">0</span>] = <span class="string">'w'</span></span><br><span class="line">TypeError: <span class="string">'str'</span> object does <span class="keyword">not</span> support item assignment</span><br><span class="line"></span><br><span class="line">teststring = <span class="string">'well'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(teststring)</span><br><span class="line"><span class="number">3056036964200</span></span><br></pre></td></tr></table></figure>
+<p>Python字符串驻留机制：对于短字符串，将其赋值给多个不同的对象时，内存中只有一个副本，多个对象共享该副本。长字符串不遵守驻留机制。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'1234'</span></span><br><span class="line">b = <span class="string">'1234'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a) == id(b)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">a = <span class="string">'1234'</span> * <span class="number">50</span></span><br><span class="line">b = <span class="string">'1234'</span> * <span class="number">50</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>id(a) == id(b)</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-1-1-字符串的格式化"><a href="#4-1-1-字符串的格式化" class="headerlink" title="4.1.1 字符串的格式化"></a>4.1.1 字符串的格式化</h3><p>‘%&emsp;[-]&emsp;[+]&emsp;[0]&emsp;[m]&emsp;[.n]&emsp;格式字符&emsp;’%&emsp;x<br>1 &emsp; 2 &emsp; 3 &emsp; 4 &emsp; 5 &emsp; 6 &emsp;&emsp;&emsp;7&emsp;&emsp;&emsp; 8 &emsp; 9</p>
+<ol>
+<li>格式标志，表示格式开始</li>
+<li>指定左对齐输出</li>
+<li>对正数加正号</li>
+<li>指定空位填0</li>
+<li>指定最小宽度</li>
+<li>指定精度</li>
+<li>指定类型</li>
+<li>格式运算符</li>
+<li>待转换的表达式</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>说明</th>
+<th>格式字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%s</td>
+<td>字符串 (采用str()的显示)</td>
+<td>%x</td>
+<td>十六进制整数</td>
+</tr>
+<tr>
+<td>%r</td>
+<td>字符串 (采用repr()的显示)</td>
+<td>%e</td>
+<td>指数 (基底写为e)</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>单个字符</td>
+<td>%E</td>
+<td>指数 (基底写为E)</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>二进制整数</td>
+<td>%f、%F</td>
+<td>浮点数</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>十进制整数</td>
+<td>%g</td>
+<td>指数(e)或浮点数 (根据显示长度)</td>
+</tr>
+<tr>
+<td>%i</td>
+<td>十进制整数</td>
+<td>%G</td>
+<td>指数(E)或浮点数 (根据显示长度)</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>八进制整数</td>
+<td>%%</td>
+<td>字符”%”</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1235</span></span><br><span class="line">so=<span class="string">"%o"</span> % x</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>so</span><br><span class="line"><span class="string">"2323"</span></span><br><span class="line"></span><br><span class="line">sh = <span class="string">"%x"</span> % x</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sh</span><br><span class="line"><span class="string">"4d3"</span></span><br><span class="line"></span><br><span class="line">se = <span class="string">"%e"</span> % x</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>se</span><br><span class="line"><span class="string">"1.235000e+03"</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(ord(<span class="string">"3"</span>)+<span class="number">1</span>)</span><br><span class="line"><span class="string">"4"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"%s"</span> % <span class="number">65</span></span><br><span class="line"><span class="string">"65"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"%s"</span> % <span class="number">65333</span></span><br><span class="line"><span class="string">"65333"</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"%d"</span> % <span class="string">"555"</span></span><br><span class="line">TypeError: %d format: a number <span class="keyword">is</span> required, <span class="keyword">not</span> str</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'555'</span>)</span><br><span class="line"><span class="number">555</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%s'</span> % [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="string">'[1, 2, 3]'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"><span class="string">'(1, 2, 3)'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'%d, %c'</span> % (<span class="number">65</span>, <span class="number">65</span>)</span><br><span class="line"><span class="string">'65, A'</span></span><br></pre></td></tr></table></figure>
+<p>另外，也可使用format方法进行格式化<br>其中，格式化字符串的函数为 str.format()</p>
+<p><br> <br></p>
+<hr>
+<p><b><i>未完待续……</i></b><i></i></p>
+
       
     </div>
     
@@ -674,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python字符串与正则表达式"><span class="nav-number">1.</span> <span class="nav-text">Python字符串与正则表达式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python字符串与正则表达式"><span class="nav-number">1.</span> <span class="nav-text">Python字符串与正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-字符串"><span class="nav-number">1.1.</span> <span class="nav-text">4.1 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-字符串的格式化"><span class="nav-number">1.1.1.</span> <span class="nav-text">4.1.1 字符串的格式化</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
