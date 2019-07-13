@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="mfdy&#39;s blog">
 <meta property="og:description" content="Python序列 本文章总结了董付国老师的Pthon程序设计(第2版)书的内容，仅供个人学习使用，如有侵权，立刻删除    by：mfdy 2.1 列表2.1.1 列表的创建与删除123a_list = [&apos;a&apos;, &apos;b&apos;, &apos;mpilgrim&apos;, &apos;z&apos;, &apos;example&apos;]a_list = []# 创建空列表 或者是用list()函数将元组、range对象、字符串或者其他类型的可迭代对象类型">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-27T14:16:27.274Z">
+<meta property="og:updated_time" content="2019-06-02T07:44:53.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python序列">
 <meta name="twitter:description" content="Python序列 本文章总结了董付国老师的Pthon程序设计(第2版)书的内容，仅供个人学习使用，如有侵权，立刻删除    by：mfdy 2.1 列表2.1.1 列表的创建与删除123a_list = [&apos;a&apos;, &apos;b&apos;, &apos;mpilgrim&apos;, &apos;z&apos;, &apos;example&apos;]a_list = []# 创建空列表 或者是用list()函数将元组、range对象、字符串或者其他类型的可迭代对象类型">
@@ -484,7 +484,7 @@
 <li>count(): 大于0成立    </li>
 <li>in 关键词</li>
 </ol>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">bList =[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">cList = [[<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>]]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> <span class="keyword">in</span> aList</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">3</span>] <span class="keyword">in</span> cList</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="number">3</span>, <span class="string">'a'</span>) <span class="keyword">in</span> zip(aList, bList)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">bList =[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">cList = [[<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>]]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> <span class="keyword">in</span> aList</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">3</span>] <span class="keyword">in</span> cList</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>(<span class="number">1</span>, <span class="string">'a'</span>) <span class="keyword">in</span> zip(aList, bList)</span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
 <h3 id="★2-1-6-切片操作"><a href="#★2-1-6-切片操作" class="headerlink" title="★2.1.6 切片操作"></a>★2.1.6 切片操作</h3><p>切片使用2个冒号分隔的3个数字来完成： <code>[x:y:z]</code><br>&emsp;x表示切片开始的位置，默认为0<br>&emsp;y表示切片截止的为，默认为列表长度<br>&emsp;z表示切片的步长，默认为1     </p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">aList = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">11</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aList[::]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">11</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aList[::<span class="number">-1</span>]</span><br><span class="line">[<span class="number">11</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aList[<span class="number">1</span>::<span class="number">2</span>]</span><br><span class="line">[<span class="number">2</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">11</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aList[<span class="number">1</span>:<span class="number">100</span>:<span class="number">2</span>]</span><br><span class="line">[<span class="number">2</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">11</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>aLIst[<span class="number">100</span>:]</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
 <p>注意：切片操作在程序中书写时如果要更改，则需要进行赋值操作</p>
@@ -801,8 +801,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/10/Python程序设计目录/" rel="next" title="Python程序设计目录">
-                <i class="fa fa-chevron-left"></i> Python程序设计目录
+              <a href="/2019/05/09/第十二届河南省ACM大学生程序设计竞赛赛后总结/" rel="next" title="第十二届河南省ACM大学生程序设计竞赛赛后总结">
+                <i class="fa fa-chevron-left"></i> 第十二届河南省ACM大学生程序设计竞赛赛后总结
               </a>
             
           </div>
@@ -811,8 +811,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/13/Python选择与循环/" rel="prev" title="Python选择与循环">
-                Python选择与循环 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/10/Python程序设计目录/" rel="prev" title="Python程序设计目录">
+                Python程序设计目录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -895,7 +895,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -906,7 +906,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -917,7 +917,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
