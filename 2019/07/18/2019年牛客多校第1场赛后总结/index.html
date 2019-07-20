@@ -7,7 +7,7 @@
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="mfdy&#39;s blog">
 <meta property="og:description" content="2019年牛客多校第1场 赛后总结 A题 ：Equivalent Prefixes&amp;emsp;题意：就是给你两个有n个不同数的串，然后保证1-p区间内任选一个区间，使得区间中最小值的下标相同，找到最大的p值 &amp;emsp;思路：我的思路是设置两个单调栈，然后每次的第i个数判断大小，放到栈顶（比它大的数弹出栈），当两个栈容量不同时，即不成立。 代码如下: 12345678910111213141516">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-20T02:25:27.957Z">
+<meta property="og:updated_time" content="2019-07-20T02:30:41.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019年牛客多校第1场 赛后总结">
 <meta name="twitter:description" content="2019年牛客多校第1场 赛后总结 A题 ：Equivalent Prefixes&amp;emsp;题意：就是给你两个有n个不同数的串，然后保证1-p区间内任选一个区间，使得区间中最小值的下标相同，找到最大的p值 &amp;emsp;思路：我的思路是设置两个单调栈，然后每次的第i个数判断大小，放到栈顶（比它大的数弹出栈），当两个栈容量不同时，即不成立。 代码如下: 12345678910111213141516">
@@ -149,7 +149,7 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -163,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -440,13 +440,13 @@
 <p>代码如下:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5e5</span> + <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[maxn], b[maxn];</span><br><span class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;s1, s2;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;b[i]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (s1.size())    s1.pop();</span><br><span class="line">        <span class="keyword">while</span> (s2.size())    s2.pop();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">        s1.push(a[<span class="number">1</span>]);</span><br><span class="line">        s2.push(b[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (s1.size() &amp;&amp; s1.top() &gt; a[i])</span><br><span class="line">                s1.pop();</span><br><span class="line">            s1.push(a[i]);</span><br><span class="line">            <span class="keyword">while</span> (s2.size() &amp;&amp; s2.top() &gt; b[i])</span><br><span class="line">                s2.pop();</span><br><span class="line">            s2.push(b[i]);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (s1.size() != s2.size())</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            ans = i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="B题：Integration"><a href="#B题：Integration" class="headerlink" title="B题：Integration"></a>B题：Integration</h3><p>&emsp;题意：已知$\int<em>{0}^{∞} \frac{1}{1 + x</em>{2} } dx = \frac{\pi}{2}$，求$\frac{1}{\pi } \int<em>{0}^{∞} \frac{1}{\prod</em>{i=1}^{n}(a_{i}^{2} + x^{2})}dx$</p>
+<h3 id="B题：Integration"><a href="#B题：Integration" class="headerlink" title="B题：Integration"></a>B题：Integration</h3><p>&emsp;题意：已知$ \int_{0}^{∞} \frac{1}{1 + x_{2} } dx = \frac{\pi}{2}$，求$\frac{1}{\pi } \int_{0}^{∞} \frac{1}{\prod_{i=1}^{n}(a_{i}^{2} + x^{2})}dx $</p>
 <p>这道题强行唤醒我的数学…但最终以失败告终…看了好几个巨巨的博客……这里感谢这位大佬的博客：<a href="https://blog.nowcoder.net/n/01372c5f542b4169a39b9fd48c7427cb" target="_blank" rel="noopener">2019牛客网暑期多校第一场B题</a></p>
-<p>$ \frac{1}{\prod<em>{i=1}^{n}(a</em>{i}^{2} + x^{2})}\,=\,\frac{c<em>{1} }{a</em>{1}^{2} + x^{2} }\,+\,\frac{c<em>{2} }{a</em>{2}^{2} + x^{2} }\,+…+\frac{c<em>{n} }{a</em>{n}^{2} + x^{2} } \ \, \<br>\qquad\quad\quad\;\;\, = \frac{c<em>{1}\cdot \prod</em>{i\neq 1 }(a<em>{i}^{2} + x^{2}) + …+c</em>{i}\cdot \prod<em>{j\neq i }(a</em>{j}^{2} + x^{2}) + … + +c<em>{n}\cdot \prod</em>{i\neq n }(a<em>{i}^{2} + x^{2})}{\prod</em>{i=1}^{n}(a_{i}^{2} + x^{2})}$</p>
-<p>我们可以得到: $\sum<em>{i = 1}^{n}C</em>{i}\cdot \prod<em>{j\neq i}(a</em>{i}^{2} + x^{2})\,=\,1$</p>
-<p>由数学归纳法，可得：$C<em>{i}\,=\,\frac{1}{\prod</em>{j\neq i}(a<em>{j}^{2}-a</em>{i}^{2})}$</p>
-<p>又因为$\int<em>{0}^{∞} \frac{1}{1 + x</em>{2} } dx = \frac{\pi}{2}$</p>
-<p>$ \frac{1}{\pi } \int<em>{0}^{∞} \frac{1}{\prod</em>{i=1}^{n}(a<em>{i}^{2} + x^{2})}dx\,=\,\frac{1}{\pi }\sum</em>{i=1}^{n}\int<em>{0}^{∞}\frac{C</em>{i} }{a<em>{i}^{2}+x^{2} }dx $<br>$ \\,\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{\pi }\sum</em>{i=1}^{n}C<em>{i}\int</em>{0}^{∞}\frac{1}{a<em>{i}^{2}+x^{2} }dx $<br>$ \\,\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{\pi }\sum</em>{i=1}^{n}\frac{c<em>{i} }{a</em>{i} }\cdot \frac{\pi}{2} $<br>$ \\,\ \qquad\qquad\qquad\qquad\;=\,\sum<em>{i=1}^{n}\frac{c</em>{i} }{2a<em>{i} } $<br>$ \\,\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{2}\sum</em>{i=1}^{n}\frac{1}{ {a<em>{i} }\cdot \prod</em>{j\neq i}(a<em>{j}^{2}-a</em>{i}^{2})} $</p>
+<p>$ \frac{1}{\prod_{i=1}^{n}(a_{i}^{2} + x^{2})}\,=\,\frac{c_{1} }{a_{1}^{2} + x^{2} }\,+\,\frac{c_{2} }{a_{2}^{2} + x^{2} }\,+…+\frac{c_{n} }{a_{n}^{2} + x^{2} } \\ \, \\<br>\qquad\quad\quad\;\;\, = \frac{c_{1}\cdot \prod_{i\neq 1 }(a_{i}^{2} + x^{2}) + …+c_{i}\cdot \prod_{j\neq i }(a_{j}^{2} + x^{2}) + … + +c_{n}\cdot \prod_{i\neq n }(a_{i}^{2} + x^{2})}{\prod_{i=1}^{n}(a_{i}^{2} + x^{2})}$</p>
+<p>我们可以得到: $\sum_{i = 1}^{n}C_{i}\cdot \prod_{j\neq i}(a_{i}^{2} + x^{2})\,=\,1$</p>
+<p>由数学归纳法，可得：$C_{i}\,=\,\frac{1}{\prod_{j\neq i}(a_{j}^{2}-a_{i}^{2})}$</p>
+<p>又因为$\int_{0}^{∞} \frac{1}{1 + x_{2} } dx = \frac{\pi}{2}$</p>
+<p>$ \frac{1}{\pi } \int_{0}^{∞} \frac{1}{\prod_{i=1}^{n}(a_{i}^{2} + x^{2})}dx\,=\,\frac{1}{\pi }\sum_{i=1}^{n}\int_{0}^{∞}\frac{C_{i} }{a_{i}^{2}+x^{2} }dx $<br>$ \\\,\\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{\pi }\sum_{i=1}^{n}C_{i}\int_{0}^{∞}\frac{1}{a_{i}^{2}+x^{2} }dx $<br>$ \\\,\\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{\pi }\sum_{i=1}^{n}\frac{c_{i} }{a_{i} }\cdot \frac{\pi}{2} $<br>$ \\\,\\ \qquad\qquad\qquad\qquad\;=\,\sum_{i=1}^{n}\frac{c_{i} }{2a_{i} } $<br>$ \\\,\\ \qquad\qquad\qquad\qquad\;=\,\frac{1}{2}\sum_{i=1}^{n}\frac{1}{ {a_{i} }\cdot \prod_{j\neq i}(a_{j}^{2}-a_{i}^{2})} $</p>
 <p>然后进行逆元，费马小定理</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span> + <span class="number">10</span>;</span><br><span class="line">ll a[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll a, ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (b) &#123;</span><br><span class="line">        <span class="keyword">if</span> (b &amp; <span class="number">1</span>)</span><br><span class="line">            res = res * a % mod;</span><br><span class="line">        a = a * a % mod;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n)) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">        ll ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            ll res = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == j)</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                res *= (a[j] * a[j] % mod - a[i] * a[i] % mod);</span><br><span class="line">                res %= mod;</span><br><span class="line">            &#125;</span><br><span class="line">            ans += qpow(<span class="number">2</span> * a[i] % mod * res % mod, mod - <span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        ans = (ans % mod + mod) % mod;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
@@ -1321,6 +1321,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
