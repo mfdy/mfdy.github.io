@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="ACM,STL,">
+  <meta name="keywords" content="ACM,Thinking,前缀和,">
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
-<meta name="keywords" content="ACM,STL">
+<meta name="description" content="Monitor[ HDU - 6514 ]  题目大意：给你个n×m的区域，每个区域被选中标记为1，没被选中标记为0，然后给一些标记的区域，查询若干个区域问是否有0的 一道二维前缀和的题目，想通没什么难度 代码如下 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505">
+<meta name="keywords" content="ACM,Thinking,前缀和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bitset HDU6515 Coding Problem">
-<meta property="og:url" content="http://yoursite.com/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/index.html">
+<meta property="og:title" content="二维前缀和+差分 HDU6514 Monitor">
+<meta property="og:url" content="http://yoursite.com/2019/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/index.html">
 <meta property="og:site_name" content="mfdy&#39;s blog">
-<meta property="og:description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
+<meta property="og:description" content="Monitor[ HDU - 6514 ]  题目大意：给你个n×m的区域，每个区域被选中标记为1，没被选中标记为0，然后给一些标记的区域，查询若干个区域问是否有0的 一道二维前缀和的题目，想通没什么难度 代码如下 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-18T12:05:01.038Z">
+<meta property="og:updated_time" content="2019-09-18T12:24:59.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bitset HDU6515 Coding Problem">
-<meta name="twitter:description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
+<meta name="twitter:title" content="二维前缀和+差分 HDU6514 Monitor">
+<meta name="twitter:description" content="Monitor[ HDU - 6514 ]  题目大意：给你个n×m的区域，每个区域被选中标记为1，没被选中标记为0，然后给一些标记的区域，查询若干个区域问是否有0的 一道二维前缀和的题目，想通没什么难度 代码如下 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/">
 
 
 
 
 
-  <title>bitset HDU6515 Coding Problem | mfdy's blog</title>
+  <title>二维前缀和+差分 HDU6514 Monitor | mfdy's blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MFDY">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">bitset HDU6515 Coding Problem</h1>
+          <h1 class="post-title" itemprop="name headline">二维前缀和+差分 HDU6514 Monitor</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-18T00:00:00+08:00">
-                2018-09-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-18T00:00:00+08:00">
+                2019-09-18
               </time>
             
 
@@ -382,8 +382,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/STL/" itemprop="url" rel="index">
-                    <span itemprop="name">STL</span>
+                  <a href="/categories/ACM/Thinking/" itemprop="url" rel="index">
+                    <span itemprop="name">Thinking</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/Thinking/前缀和/" itemprop="url" rel="index">
+                    <span itemprop="name">前缀和</span>
                   </a>
                 </span>
 
@@ -400,8 +411,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/" itemprop="commentCount"></span>
+                <a href="/2019/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -434,19 +445,10 @@
       
 
       
-        <h2 id="Coding-Problem"><a href="#Coding-Problem" class="headerlink" title="Coding Problem"></a><h1><center>Coding Problem</center></h1></h2><h2 id="HDU-6515"><a href="#HDU-6515" class="headerlink" title="[ HDU - 6515 ]  "></a><p align="right"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6515" target="_blank" rel="noopener">[ HDU - 6515 ]</a></p>  </h2><p>题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。<br>然后这个数组每六位组成一个数字的ASCII输出</p>
-<p>一道模拟题，使用C++中的bitset类型会简单的很多</p>
-<p>那么正好来学习一下bitset的用法：</p>
-<h3 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h3><p>此处参考了这份博客：<a href="https://www.cnblogs.com/magisk/p/8809922.html" target="_blank" rel="noopener">https://www.cnblogs.com/magisk/p/8809922.html</a></p>
-<p>bitset大概就是一个二进制数组，每个位置只占1bit，想一下状压dp？</p>
-<p>bitset的原理大概是将很多数压成一个，从而节省空间和时间（暴力出奇迹）</p>
-<h4 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h4><p>构造时可以直接指定大小，也可以使用string和字符串数组来进行构造<br>需要注意的是，在使用字符串构造时，字符串中只能包含01，否则会抛出异常</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bitset</span>&lt;4&gt; bitset1;　　<span class="comment">//无参构造，长度为４，默认每一位为０</span></span><br><span class="line"><span class="built_in">bitset</span>&lt;8&gt; bitset2(<span class="number">12</span>);　　<span class="comment">//长度为８，二进制保存，前面用０补充</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> s = <span class="string">"100101"</span>;</span><br><span class="line"><span class="built_in">bitset</span>&lt;10&gt; bitset3(s);　　<span class="comment">//长度为10，前面用０补充</span></span><br><span class="line"><span class="keyword">char</span> s2[] = <span class="string">"10101"</span>;</span><br><span class="line"><span class="built_in">bitset</span>&lt;13&gt; bitset4(s2);　　<span class="comment">//长度为13，前面用０补充</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; bitset1 &lt;&lt; <span class="built_in">endl</span>;　　<span class="comment">//0000</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; bitset2 &lt;&lt; <span class="built_in">endl</span>;　　<span class="comment">//00001100</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; bitset3 &lt;&lt; <span class="built_in">endl</span>;　　<span class="comment">//0000100101</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; bitset4 &lt;&lt; <span class="built_in">endl</span>;　　<span class="comment">//0000000010101</span></span><br></pre></td></tr></table></figure>
-<h4 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h4><p>它支持所有的位运算操作：<code>^</code> <code>&amp;</code> <code>|</code> <code>&gt;&gt;</code> 等</p>
-<h4 id="bitset的函数"><a href="#bitset的函数" class="headerlink" title="bitset的函数"></a>bitset的函数</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bit</span>.<span class="built_in">size</span>()       返回大小（位数）</span><br><span class="line"><span class="built_in">bit</span>.count()     返回<span class="number">1</span>的个数</span><br><span class="line"><span class="built_in">bit</span>.any()       返回是否有<span class="number">1</span></span><br><span class="line"><span class="built_in">bit</span>.none()      返回是否没有<span class="number">1</span></span><br><span class="line"><span class="built_in">bit</span>.set()       全都变成<span class="number">1</span></span><br><span class="line"><span class="built_in">bit</span>.set(p)      将第p + <span class="number">1</span>位变成<span class="number">1</span>（bitset是从第<span class="number">0</span>位开始的！）</span><br><span class="line"><span class="built_in">bit</span>.set(p, x)   将第p + <span class="number">1</span>位变成x</span><br><span class="line"><span class="built_in">bit</span>.reset()     全都变成<span class="number">0</span></span><br><span class="line"><span class="built_in">bit</span>.reset(p)    将第p + <span class="number">1</span>位变成<span class="number">0</span></span><br><span class="line"><span class="built_in">bit</span>.flip()      全都取反</span><br><span class="line"><span class="built_in">bit</span>.flip(p)     将第p + <span class="number">1</span>位取反</span><br><span class="line"><span class="built_in">bit</span>.to_ulong()  返回它转换为<span class="keyword">unsigned</span> <span class="keyword">long</span>的结果，如果超出范围则报错</span><br><span class="line"><span class="built_in">bit</span>.to_ullong() 返回它转换为<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span>的结果，如果超出范围则报错</span><br><span class="line"><span class="built_in">bit</span>.to_string() 返回它转换为<span class="keyword">string</span>的结果</span><br></pre></td></tr></table></figure>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>需要注意的坑点是这道题不能有换行符，行尾有空格</p>
+        <h2 id="Monitor"><a href="#Monitor" class="headerlink" title="Monitor"></a><h1><center>Monitor</center></h1></h2><h2 id="HDU-6514"><a href="#HDU-6514" class="headerlink" title="[ HDU - 6514 ]  "></a><p align="right"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6514" target="_blank" rel="noopener">[ HDU - 6514 ]</a></p>  </h2><p>题目大意：给你个n×m的区域，每个区域被选中标记为1，没被选中标记为0，然后给一些标记的区域，查询若干个区域问是否有0的</p>
+<p>一道二维前缀和的题目，想通没什么难度</p>
 <p>代码如下</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">change</span><span class="params">(<span class="keyword">char</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">bitset</span>&lt;8&gt; b((<span class="keyword">int</span>)c);</span><br><span class="line">    <span class="built_in">stringstream</span> str;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    str &lt;&lt; b;</span><br><span class="line">    str &gt;&gt; s;</span><br><span class="line">    reverse(s.begin(), s.end());</span><br><span class="line">    <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); i+= <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">string</span> ts = change(s[i]) + change(s[i + <span class="number">1</span>]) + change(s[i + <span class="number">2</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; ts.size(); j+= <span class="number">6</span>) &#123;</span><br><span class="line">            <span class="built_in">bitset</span>&lt;6&gt; B(ts, j, <span class="number">6</span>);</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, B);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> IO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fin freopen(<span class="meta-string">"in.txt"</span>, <span class="meta-string">"r"</span>, stdin)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> fout freopen(<span class="meta-string">"out.txt"</span>, <span class="meta-string">"w"</span>, stdout)</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; P;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e7</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n, m, p, q;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getid</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">0</span> || j == <span class="number">0</span> || i &gt; n || j &gt; m)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> (i - <span class="number">1</span>) * m + j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id = getid(i, j);</span><br><span class="line">    <span class="keyword">if</span> (!id)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    a[id] += v;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    IO;</span><br><span class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m)) &#123;</span><br><span class="line">        <span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span>(a));</span><br><span class="line">        <span class="keyword">int</span> x1, y1, x2, y2;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;p);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; p; i++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;x1, &amp;y1, &amp;x2, &amp;y2);</span><br><span class="line">            add(x1, y1, <span class="number">1</span>);</span><br><span class="line">            add(x2 + <span class="number">1</span>, y2 + <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">            add(x1, y2 + <span class="number">1</span>, <span class="number">-1</span>);</span><br><span class="line">            add(x2 + <span class="number">1</span>, y1, <span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">                a[getid(i, j)] += a[getid(i - <span class="number">1</span>, j)] + a[getid(i, j - <span class="number">1</span>)] - a[getid(i - <span class="number">1</span>, j - <span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">                <span class="keyword">if</span> (a[getid(i,j)] &gt; <span class="number">0</span>)</span><br><span class="line">                    a[getid(i, j)] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">                a[getid(i, j)] += a[getid(i - <span class="number">1</span>, j)] + a[getid(i, j - <span class="number">1</span>)] - a[getid(i - <span class="number">1</span>, j - <span class="number">1</span>)];</span><br><span class="line"></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;x1, &amp;y1, &amp;x2, &amp;y2);</span><br><span class="line">            <span class="keyword">int</span> ans = a[getid(x2, y2)] - a[getid(x1 - <span class="number">1</span>, y2)] - a[getid(x2, y1 - <span class="number">1</span>)] + a[getid(x1 - <span class="number">1</span>, y1 - <span class="number">1</span>)];</span><br><span class="line">            <span class="keyword">if</span> (ans == (x2 - x1 + <span class="number">1</span>) * (y2 - y1 + <span class="number">1</span>))</span><br><span class="line">                <span class="built_in">puts</span>(<span class="string">"YES"</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">puts</span>(<span class="string">"NO"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -465,7 +467,9 @@
           
             <a href="/tags/ACM/" rel="tag"><i class="fa fa-tag"></i> ACM</a>
           
-            <a href="/tags/STL/" rel="tag"><i class="fa fa-tag"></i> STL</a>
+            <a href="/tags/Thinking/" rel="tag"><i class="fa fa-tag"></i> Thinking</a>
+          
+            <a href="/tags/前缀和/" rel="tag"><i class="fa fa-tag"></i> 前缀和</a>
           
         </div>
       
@@ -478,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/" rel="next" title="二维前缀和+差分 HDU6514 Monitor">
-                <i class="fa fa-chevron-left"></i> 二维前缀和+差分 HDU6514 Monitor
+              <a href="/2019/09/18/ACM/STL/bitset HDU6515 Coding Problem/" rel="next" title="bitset HDU6515 Coding Problem">
+                <i class="fa fa-chevron-left"></i> bitset HDU6515 Coding Problem
               </a>
             
           </div>
@@ -487,10 +491,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/09/ACM/Competition Summary/第十二届河南省ACM大学生程序设计竞赛赛后总结/" rel="prev" title="第十二届河南省ACM大学生程序设计竞赛赛后总结">
-                第十二届河南省ACM大学生程序设计竞赛赛后总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +688,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Coding-Problem"><span class="nav-number">1.</span> <span class="nav-text">Coding Problem</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Coding-Problem"><span class="nav-number"></span> <span class="nav-text">Coding Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU-6515"><span class="nav-number">1.</span> <span class="nav-text">[ HDU - 6515 ]  </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bitset"><span class="nav-number">1.1.</span> <span class="nav-text">bitset</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#构造"><span class="nav-number">1.1.1.</span> <span class="nav-text">构造</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性质"><span class="nav-number">1.1.2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bitset的函数"><span class="nav-number">1.1.3.</span> <span class="nav-text">bitset的函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Monitor"><span class="nav-number">1.</span> <span class="nav-text">Monitor</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Monitor"><span class="nav-number"></span> <span class="nav-text">Monitor</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU-6514"><span class="nav-number">1.</span> <span class="nav-text">[ HDU - 6514 ]  </span></a></li></ol></li></div>
             
 
           </div>
