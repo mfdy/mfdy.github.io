@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="ACM,Thinking,DFS,">
+  <meta name="keywords" content="ACM,STL,">
 
 
 
@@ -88,16 +88,16 @@
 
 
 <meta name="description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
-<meta name="keywords" content="ACM,Thinking,DFS">
+<meta name="keywords" content="ACM,STL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DFS:图的联通块&amp;nbsp; AOJ-0118&amp;nbsp; Property Distribution">
+<meta property="og:title" content="bitset HDU6515 Coding Problem">
 <meta property="og:url" content="http://yoursite.com/2018/09/18/ACM/STL/bitset HDU6515 Coding Problem/index.html">
 <meta property="og:site_name" content="mfdy&#39;s blog">
 <meta property="og:description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-18T11:48:57.355Z">
+<meta property="og:updated_time" content="2019-09-18T12:05:01.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DFS:图的联通块&amp;nbsp; AOJ-0118&amp;nbsp; Property Distribution">
+<meta name="twitter:title" content="bitset HDU6515 Coding Problem">
 <meta name="twitter:description" content="Coding Problem[ HDU - 6515 ]  题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。然后这个数组每六位组成一个数字的ASCII输出 一道模拟题，使用C++中的bitset类型会简单的很多 那么正好来学习一下bitset的用法： bitset此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.ht">
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <title>DFS:图的联通块&nbsp; AOJ-0118&nbsp; Property Distribution | mfdy's blog</title>
+  <title>bitset HDU6515 Coding Problem | mfdy's blog</title>
   
 
 
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">DFS:图的联通块&nbsp; AOJ-0118&nbsp; Property Distribution</h1>
+          <h1 class="post-title" itemprop="name headline">bitset HDU6515 Coding Problem</h1>
         
 
         <div class="post-meta">
@@ -382,19 +382,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/Thinking/" itemprop="url" rel="index">
-                    <span itemprop="name">Thinking</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/Thinking/DFS/" itemprop="url" rel="index">
-                    <span itemprop="name">DFS</span>
+                  <a href="/categories/ACM/STL/" itemprop="url" rel="index">
+                    <span itemprop="name">STL</span>
                   </a>
                 </span>
 
@@ -448,8 +437,7 @@
         <h2 id="Coding-Problem"><a href="#Coding-Problem" class="headerlink" title="Coding Problem"></a><h1><center>Coding Problem</center></h1></h2><h2 id="HDU-6515"><a href="#HDU-6515" class="headerlink" title="[ HDU - 6515 ]  "></a><p align="right"><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6515" target="_blank" rel="noopener">[ HDU - 6515 ]</a></p>  </h2><p>题目大意：给你一个字符串，每个字母的ASCII二级制颠倒过来组成一个01数组。<br>然后这个数组每六位组成一个数字的ASCII输出</p>
 <p>一道模拟题，使用C++中的bitset类型会简单的很多</p>
 <p>那么正好来学习一下bitset的用法：</p>
-<h3 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h3><p align="right">此处参考了这份博客：https://www.cnblogs.com/magisk/p/8809922.html</p>
-
+<h3 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h3><p>此处参考了这份博客：<a href="https://www.cnblogs.com/magisk/p/8809922.html" target="_blank" rel="noopener">https://www.cnblogs.com/magisk/p/8809922.html</a></p>
 <p>bitset大概就是一个二进制数组，每个位置只占1bit，想一下状压dp？</p>
 <p>bitset的原理大概是将很多数压成一个，从而节省空间和时间（暴力出奇迹）</p>
 <h4 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h4><p>构造时可以直接指定大小，也可以使用string和字符串数组来进行构造<br>需要注意的是，在使用字符串构造时，字符串中只能包含01，否则会抛出异常</p>
@@ -477,9 +465,7 @@
           
             <a href="/tags/ACM/" rel="tag"><i class="fa fa-tag"></i> ACM</a>
           
-            <a href="/tags/Thinking/" rel="tag"><i class="fa fa-tag"></i> Thinking</a>
-          
-            <a href="/tags/DFS/" rel="tag"><i class="fa fa-tag"></i> DFS</a>
+            <a href="/tags/STL/" rel="tag"><i class="fa fa-tag"></i> STL</a>
           
         </div>
       
@@ -492,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/" rel="next" title="DFS:图的联通块&nbsp; AOJ-0118&nbsp; Property Distribution">
-                <i class="fa fa-chevron-left"></i> DFS:图的联通块&nbsp; AOJ-0118&nbsp; Property Distribution
+              <a href="/2018/09/18/ACM/Thinking/二维前缀和+差分 HDU6514 Monitor/" rel="next" title="二维前缀和+差分 HDU6514 Monitor">
+                <i class="fa fa-chevron-left"></i> 二维前缀和+差分 HDU6514 Monitor
               </a>
             
           </div>
@@ -597,7 +583,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -608,7 +594,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
