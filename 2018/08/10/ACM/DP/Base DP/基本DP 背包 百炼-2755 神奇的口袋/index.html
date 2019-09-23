@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
+<meta name="description" content="神奇的口袋[ HDU - 2069 ]     题目大意：背包问题 思路设V(m,n)表示在n个数字中插入m个加号所能形成 的表达式最小值，那么:    if m = 0    V(m,n) = n个数字构成的整数 else if n &amp;lt; m + 1    V(m,n) = ∞ else    V(m,n) = Min{ V(m-1,i) + Num(i+1,n) } ( i = m … n">
 <meta name="keywords" content="ACM,动态规划">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态规划—最长上升子序列问题 两种角度及优化算法">
-<meta property="og:url" content="http://yoursite.com/2018/08/12/ACM/DP/Base DP/动态规划—最长上升子序列问题 两种角度及优化算法/index.html">
+<meta property="og:title" content="基本DP 百炼 - 2755 神奇的口袋">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/ACM/DP/Base DP/基本DP 背包 百炼-2755 神奇的口袋/index.html">
 <meta property="og:site_name" content="mfdy&#39;s blog">
-<meta property="og:description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
+<meta property="og:description" content="神奇的口袋[ HDU - 2069 ]     题目大意：背包问题 思路设V(m,n)表示在n个数字中插入m个加号所能形成 的表达式最小值，那么:    if m = 0    V(m,n) = n个数字构成的整数 else if n &amp;lt; m + 1    V(m,n) = ∞ else    V(m,n) = Min{ V(m-1,i) + Num(i+1,n) } ( i = m … n">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-22T13:54:26.047Z">
+<meta property="og:updated_time" content="2019-09-23T10:45:29.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态规划—最长上升子序列问题 两种角度及优化算法">
-<meta name="twitter:description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
+<meta name="twitter:title" content="基本DP 百炼 - 2755 神奇的口袋">
+<meta name="twitter:description" content="神奇的口袋[ HDU - 2069 ]     题目大意：背包问题 思路设V(m,n)表示在n个数字中插入m个加号所能形成 的表达式最小值，那么:    if m = 0    V(m,n) = n个数字构成的整数 else if n &amp;lt; m + 1    V(m,n) = ∞ else    V(m,n) = Min{ V(m-1,i) + Num(i+1,n) } ( i = m … n">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/12/ACM/DP/Base DP/动态规划—最长上升子序列问题 两种角度及优化算法/">
+  <link rel="canonical" href="http://yoursite.com/2018/08/10/ACM/DP/Base DP/基本DP 背包 百炼-2755 神奇的口袋/">
 
 
 
 
 
-  <title>动态规划—最长上升子序列问题 两种角度及优化算法 | mfdy's blog</title>
+  <title>基本DP 百炼 - 2755 神奇的口袋 | mfdy's blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/12/ACM/DP/Base DP/动态规划—最长上升子序列问题 两种角度及优化算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/ACM/DP/Base DP/基本DP 背包 百炼-2755 神奇的口袋/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MFDY">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">动态规划—最长上升子序列问题 两种角度及优化算法</h1>
+          <h1 class="post-title" itemprop="name headline">基本DP 百炼 - 2755 神奇的口袋</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T00:00:00+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T00:00:00+08:00">
+                2018-08-10
               </time>
             
 
@@ -389,6 +389,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/动态规划/基本DP/" itemprop="url" rel="index">
+                    <span itemprop="name">基本DP</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -400,8 +411,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/12/ACM/DP/Base DP/动态规划—最长上升子序列问题 两种角度及优化算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/12/ACM/DP/Base DP/动态规划—最长上升子序列问题 两种角度及优化算法/" itemprop="commentCount"></span>
+                <a href="/2018/08/10/ACM/DP/Base DP/基本DP 背包 百炼-2755 神奇的口袋/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/10/ACM/DP/Base DP/基本DP 背包 百炼-2755 神奇的口袋/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -434,29 +445,14 @@
       
 
       
-        <h1><center>动态规划—最长上升子序列问题</center></h1>
+        <h1 id="神奇的口袋"><a href="#神奇的口袋" class="headerlink" title="神奇的口袋"></a><center>神奇的口袋</center></h1><p align="right"><a href="http://bailian.openjudge.cn/practice/2755" target="_blank" rel="noopener">[ HDU - 2069 ]</a></p>  
 
 <hr>
-<p></p><h2><center>最长上升子序列</center></h2><p></p>
-<p align="right"><a href="https://cn.vjudge.net/problem/OpenJ_Bailian-2757" target="_blank" rel="noopener">[ OpenJ_Bailian - 2757 ]</a></p>  
-
-<p>一个数的序列 bi，当 b1 &lt; b2 &lt; … &lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &lt;= i1 &lt; i2 &lt; … &lt; iK &lt;= N。比如，对于序列(1, 7, 3, 5, 9, 4, 8)，有它的一些上升子序列，如(1, 7), (3, 4, 8)等等。这些子序列中最长的长度是4，比如子序列(1, 3, 5, 8). </p>
-<p>你的任务，就是对于给定的序列，求出最长上升子序列的长度。</p>
-<p></p><h4><b>Input</b></h4><br>输入的第一行是序列的长度N (1 &lt;= N &lt;= 1000)。第二行给出序列中的N个整数，这些整数的取值范围都在0到10000。<p></p>
-<p></p><h4><b>Output</b></h4><br>最长上升子序列的长度。<p></p>
-<p></p><h4><b>Sample Input</b></h4><br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">7</span> <span class="number">3</span> <span class="number">5</span> <span class="number">9</span> <span class="number">4</span> <span class="number">8</span></span><br></pre></td></tr></table></figure><p></p>
-<p></p><h4><b>Sample Output</b></h4><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure><p></p>
-<hr>
-<p></p><h2>题解</h2><br>找子问题 “求以ak（k=1, 2, 3…N）为终点的最长上升子序列的 一个上升子序列中最右边的那个数，称为该子序列的长度” “终点”。<p></p>
-<p>虽然这个子问题和原问题形式上并不完全一样，但是只要这N个子问题都解决了，那么这N个子问题的解中，最大的那个就是整个问题的解。</p>
-<hr>
-<p></p><h2>方法一</h2><br>状态i的值dp[i] 由若干个值已知的状态值dp[0], dp[1], …, dp[i-1]推出。<br>复杂度<b><i>O(n<sup>2</sup>)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		dp[i] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j] &lt; a[i])</span><br><span class="line">				dp[i] = max(dp[i], dp[j] + <span class="number">1</span>);</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *max_element(dp, dp + n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p></p><h2>方法二</h2><br>状态i的值dp[i]在被更新的时候, 依据dp[i]去更新和状态i相关的dp[i+1], …, dp[n-1]的值。<br>复杂度<b><i>O(n<sup>2</sup>)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		dp[i] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[i])</span><br><span class="line">				dp[j] = max(dp[j], dp[i] + <span class="number">1</span>);</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *max_element(dp, dp + n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p></p><h4>优化</h4><br>将全部dp[i]的值初始化为INF。然后数组中除了INF之外为单调递增，所以每个dp[i]最多只需要一次更新。对于更新位置不必逐个遍历，可以利用二分搜索，这样复杂度可降为<b><i>O(nlogn)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">9999999</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	fill(dp, dp + n, INF);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		*lower_bound(dp, dp + n, a[i]) = a[i];</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; lower_bound(dp, dp + n, INF) - dp &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="题目大意："><a href="#题目大意：" class="headerlink" title="题目大意："></a>题目大意：</h3><p>背包问题</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>设V(m,n)表示在n个数字中插入m个加号所能形成 的表达式最小值，那么:  </p>
+<p> if m = 0<br>    V(m,n) = n个数字构成的整数<br> else if n &lt; m + 1<br>    V(m,n) = ∞<br> else<br>    V(m,n) = Min{ V(m-1,i) + Num(i+1,n) } ( i = m … n-1)  </p>
+<p> Num(i,j)表示从第i个数字到第j个数字所组成的数。数字编号从1开始算。此操 作复杂度是O(j-i+1)，可以预处理后存起来。<br> 总时间复杂度:O(mn2)  </p>
+<h3 id="题解代码"><a href="#题解代码" class="headerlink" title="题解代码"></a>题解代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">50</span>][<span class="number">50</span>];</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">50</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        dp[<span class="number">0</span>][i] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">40</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            dp[i][j] = dp[i][j - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (i - a[j] &gt;= <span class="number">0</span>)</span><br><span class="line">                dp[i][j] += dp[i - a[j]][j - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; dp[<span class="number">40</span>][n] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -488,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/09/ACM/DP/Base DP/动态规划—最长公共子序列问题 HDU-1159 Common Subsequence/" rel="next" title="动态规划—最长公共子序列问题 HDU-1159 Common Subsequence">
-                <i class="fa fa-chevron-left"></i> 动态规划—最长公共子序列问题 HDU-1159 Common Subsequence
+              <a href="/2018/08/09/ACM/DP/Base DP/基本DP 背包 POJ-3624 Charm Bracelet/" rel="next" title="基本DP 背包 POJ - 3624 Charm Bracelet">
+                <i class="fa fa-chevron-left"></i> 基本DP 背包 POJ - 3624 Charm Bracelet
               </a>
             
           </div>
@@ -498,8 +494,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/29/Windows/ftp打开方式更改为资源管理器方法/" rel="prev" title="ftp打开方式更改为资源管理器方法">
-                ftp打开方式更改为资源管理器方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/12/ACM/DP/Base DP/基本DP LIS POJ-1088 滑雪/" rel="prev" title="基本DP POJ - 1088 滑雪">
+                基本DP POJ - 1088 滑雪 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -582,7 +578,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -593,7 +589,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -698,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">动态规划—最长上升子序列问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">最长上升子序列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Sample Output</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text">方法二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神奇的口袋"><span class="nav-number">1.</span> <span class="nav-text">神奇的口袋</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意："><span class="nav-number">1.0.1.</span> <span class="nav-text">题目大意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.0.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解代码"><span class="nav-number">1.0.3.</span> <span class="nav-text">题解代码</span></a></li></ol></li></ol></div>
             
 
           </div>
