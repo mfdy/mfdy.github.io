@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="ACM,动态规划,">
+  <meta name="keywords" content="ACM,Graph,网络流,">
 
 
 
@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
-<meta name="keywords" content="ACM,动态规划">
+<meta name="description" content="网络流—Edmonds-Karp 最短增广路算法(最大流)思路 ■求最大流的过程，就是不断找到一条源到汇的路径，然后构建残余网络，再在残余网络上寻找新的路径，使总流量增加，然后形成新的残余网络，再寻找新路径…..直到某个残余网络上找不到从源到汇的路径为止，最大流就算出来了。    ■每次寻找新流量并构造新残余网络的过程，就叫做寻找流量的“增广路径”，也叫“增广”   现在假设每条边的容量都是整数，">
+<meta name="keywords" content="ACM,Graph,网络流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动态规划—最长上升子序列问题 两种角度及优化算法">
-<meta property="og:url" content="http://yoursite.com/2018/08/12/ACM/DP/动态规划—最长上升子序列问题 两种角度及优化算法/index.html">
+<meta property="og:title" content="网络流—Edmonds-Karp最短增广路算法(最大流)">
+<meta property="og:url" content="http://yoursite.com/2018/08/05/ACM/Graph/Network Flow/网络流—Edmonds-Karp 最短增广路算法(最大流)/index.html">
 <meta property="og:site_name" content="mfdy&#39;s blog">
-<meta property="og:description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
+<meta property="og:description" content="网络流—Edmonds-Karp 最短增广路算法(最大流)思路 ■求最大流的过程，就是不断找到一条源到汇的路径，然后构建残余网络，再在残余网络上寻找新的路径，使总流量增加，然后形成新的残余网络，再寻找新路径…..直到某个残余网络上找不到从源到汇的路径为止，最大流就算出来了。    ■每次寻找新流量并构造新残余网络的过程，就叫做寻找流量的“增广路径”，也叫“增广”   现在假设每条边的容量都是整数，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-12T11:06:26.817Z">
+<meta property="og:updated_time" content="2019-09-22T13:52:32.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动态规划—最长上升子序列问题 两种角度及优化算法">
-<meta name="twitter:description" content="动态规划—最长上升子序列问题   最长上升子序列 [ OpenJ_Bailian - 2757 ]    一个数的序列 bi，当 b1 &amp;lt; b2 &amp;lt; … &amp;lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &amp;lt;= i1 &amp;lt; i2 &amp;lt; … &amp;lt; i">
+<meta name="twitter:title" content="网络流—Edmonds-Karp最短增广路算法(最大流)">
+<meta name="twitter:description" content="网络流—Edmonds-Karp 最短增广路算法(最大流)思路 ■求最大流的过程，就是不断找到一条源到汇的路径，然后构建残余网络，再在残余网络上寻找新的路径，使总流量增加，然后形成新的残余网络，再寻找新路径…..直到某个残余网络上找不到从源到汇的路径为止，最大流就算出来了。    ■每次寻找新流量并构造新残余网络的过程，就叫做寻找流量的“增广路径”，也叫“增广”   现在假设每条边的容量都是整数，">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/12/ACM/DP/动态规划—最长上升子序列问题 两种角度及优化算法/">
+  <link rel="canonical" href="http://yoursite.com/2018/08/05/ACM/Graph/Network Flow/网络流—Edmonds-Karp 最短增广路算法(最大流)/">
 
 
 
 
 
-  <title>动态规划—最长上升子序列问题 两种角度及优化算法 | mfdy's blog</title>
+  <title>网络流—Edmonds-Karp最短增广路算法(最大流) | mfdy's blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/12/ACM/DP/动态规划—最长上升子序列问题 两种角度及优化算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/05/ACM/Graph/Network Flow/网络流—Edmonds-Karp 最短增广路算法(最大流)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MFDY">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">动态规划—最长上升子序列问题 两种角度及优化算法</h1>
+          <h1 class="post-title" itemprop="name headline">网络流—Edmonds-Karp最短增广路算法(最大流)</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T00:00:00+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-05T00:00:00+08:00">
+                2018-08-05
               </time>
             
 
@@ -382,8 +382,30 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/动态规划/" itemprop="url" rel="index">
-                    <span itemprop="name">动态规划</span>
+                  <a href="/categories/ACM/Graph/" itemprop="url" rel="index">
+                    <span itemprop="name">Graph</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/Graph/网络流/" itemprop="url" rel="index">
+                    <span itemprop="name">网络流</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/Graph/网络流/最大流/" itemprop="url" rel="index">
+                    <span itemprop="name">最大流</span>
                   </a>
                 </span>
 
@@ -400,8 +422,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/12/ACM/DP/动态规划—最长上升子序列问题 两种角度及优化算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/12/ACM/DP/动态规划—最长上升子序列问题 两种角度及优化算法/" itemprop="commentCount"></span>
+                <a href="/2018/08/05/ACM/Graph/Network Flow/网络流—Edmonds-Karp 最短增广路算法(最大流)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/05/ACM/Graph/Network Flow/网络流—Edmonds-Karp 最短增广路算法(最大流)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -434,29 +456,46 @@
       
 
       
-        <h1><center>动态规划—最长上升子序列问题</center></h1>
+        <h2 id="网络流—Edmonds-Karp-最短增广路算法-最大流"><a href="#网络流—Edmonds-Karp-最短增广路算法-最大流" class="headerlink" title="网络流—Edmonds-Karp 最短增广路算法(最大流)"></a><h1><center>网络流—Edmonds-Karp 最短增广路算法(最大流)</center></h1></h2><h4>思路</h4>
+■求最大流的过程，就是不断找到一条源到汇的路径，然后构建残余网络，再在残余网络上寻找新的路径，使总流量增加，然后形成新的残余网络，再寻找新路径…..直到某个残余网络上找不到从源到汇的路径为止，最大流就算出来了。  
 
-<hr>
-<p></p><h2><center>最长上升子序列</center></h2><p></p>
-<p align="right"><a href="https://cn.vjudge.net/problem/OpenJ_Bailian-2757" target="_blank" rel="noopener">[ OpenJ_Bailian - 2757 ]</a></p>  
+■每次寻找新流量并构造新残余网络的过程，就叫做寻找流量的“增广路径”，也叫“增广” 
 
-<p>一个数的序列 bi，当 b1 &lt; b2 &lt; … &lt; bS的时候，我们称这个序列是上升的。对于给定的一个序列( a1, a2, …, aN)，我们可以得到一些上升的子序列( ai1, ai2, …, aiK)，这里1 &lt;= i1 &lt; i2 &lt; … &lt; iK &lt;= N。比如，对于序列(1, 7, 3, 5, 9, 4, 8)，有它的一些上升子序列，如(1, 7), (3, 4, 8)等等。这些子序列中最长的长度是4，比如子序列(1, 3, 5, 8). </p>
-<p>你的任务，就是对于给定的序列，求出最长上升子序列的长度。</p>
-<p></p><h4><b>Input</b></h4><br>输入的第一行是序列的长度N (1 &lt;= N &lt;= 1000)。第二行给出序列中的N个整数，这些整数的取值范围都在0到10000。<p></p>
-<p></p><h4><b>Output</b></h4><br>最长上升子序列的长度。<p></p>
-<p></p><h4><b>Sample Input</b></h4><br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">7</span> <span class="number">3</span> <span class="number">5</span> <span class="number">9</span> <span class="number">4</span> <span class="number">8</span></span><br></pre></td></tr></table></figure><p></p>
-<p></p><h4><b>Sample Output</b></h4><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure><p></p>
+现在假设每条边的容量都是整数，这个算法每次都能将流至少增加1   
+
+由于整个网络的流量最多不超过 图中所有的边的容量和C，从而算法会结束 
+
+<h4>复杂度</h4>
+找增广路径的算法可以用dfs，复杂度为边数m+顶点数n ，Dfs 最多运行C次 ，所以时间复杂度为C*(m+n) =C* n^2 
+这个算法实现很简单  
+但是注意到在图中C可能会非常大  
+
+因此在每次增广的时候，选择从源到汇的具有最少边数的增广路径,即不是通过dfs寻找增广路径，而是通过bfs寻找增广路径。 
+
+这就是<b>Edmonds-Karp 最短增广路算法 </b>
+
+已经证明这种算法的复杂度上限为nm<sup>2</sup> (n是点数，m是边数） 
+
+---
+<h2><center>例题： Drainage Ditches</center></h2>
+
+<p align="right"><a href="https://cn.vjudge.net/problem/POJ-1273" target="_blank" rel="noopener">[ POJ - 1273 ]</a></p>  
+
+Every time it rains on Farmer John's fields, a pond forms over Bessie's favorite clover patch. This means that the clover is covered by water for awhile and takes quite a long time to regrow. Thus, Farmer John has built a set of drainage ditches so that Bessie's clover patch is never covered in water. Instead, the water is drained to a nearby stream. Being an ace engineer, Farmer John has also installed regulators at the beginning of each ditch, so he can control at what rate water flows into that ditch.   
+Farmer John knows not only how many gallons of water each ditch can transport per minute but also the exact layout of the ditches, which feed out of the pond and into each other and stream in a potentially complex network.   
+Given all this information, determine the maximum rate at which water can be transported out of the pond and into the stream. For any given ditch, water flows in only one direction, but there might be a way that water can flow in a circle. 
+
+<h4><b>Input</b></h4>
+
+<p><b><i>The input includes several cases.</i></b> For each case, the first line contains two space-separated integers, N (0 &lt;= N &lt;= 200) and M (2 &lt;= M &lt;= 200). N is the number of ditches that Farmer John has dug. M is the number of intersections points for those ditches. Intersection 1 is the pond. Intersection point M is the stream. Each of the following N lines contains three integers, Si, Ei, and Ci. Si and Ei (1 &lt;= Si, Ei &lt;= M) designate the intersections between which this ditch flows. Water will flow through this ditch from Si to Ei. Ci (0 &lt;= Ci &lt;= 10,000,000) is the maximum rate at which water will flow through the ditch.</p>
+<h4><b>Output</b></h4>
+
+<p>For each case, output a single integer, the maximum rate at which water may emptied from the pond.</p>
+<p></p><h4><b>Sample Input</b></h4><br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">5 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">40</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">4</span> <span class="number">20</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">4</span> <span class="number">20</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">3</span> <span class="number">30</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">4</span> <span class="number">10</span></span><br></pre></td></tr></table></figure><p></p>
+<p></p><h4><b>Sample Output</b></h4><br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">50</span></span><br></pre></td></tr></table></figure><p></p>
 <hr>
-<p></p><h2>题解</h2><br>找子问题 “求以ak（k=1, 2, 3…N）为终点的最长上升子序列的 一个上升子序列中最右边的那个数，称为该子序列的长度” “终点”。<p></p>
-<p>虽然这个子问题和原问题形式上并不完全一样，但是只要这N个子问题都解决了，那么这N个子问题的解中，最大的那个就是整个问题的解。</p>
-<hr>
-<p></p><h2>方法一</h2><br>状态i的值dp[i] 由若干个值已知的状态值dp[0], dp[1], …, dp[i-1]推出。<br>复杂度<b><i>O(n<sup>2</sup>)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		dp[i] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j] &lt; a[i])</span><br><span class="line">				dp[i] = max(dp[i], dp[j] + <span class="number">1</span>);</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *max_element(dp, dp + n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<p></p><h2>方法二</h2><br>状态i的值dp[i]在被更新的时候, 依据dp[i]去更新和状态i相关的dp[i+1], …, dp[n-1]的值。<br>复杂度<b><i>O(n<sup>2</sup>)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		dp[i] = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">			<span class="keyword">if</span>(a[j] &gt; a[i])</span><br><span class="line">				dp[j] = max(dp[j], dp[i] + <span class="number">1</span>);</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *max_element(dp, dp + n) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p></p><h4>优化</h4><br>将全部dp[i]的值初始化为INF。然后数组中除了INF之外为单调递增，所以每个dp[i]最多只需要一次更新。对于更新位置不必逐个遍历，可以利用二分搜索，这样复杂度可降为<b><i>O(nlogn)</i></b><p></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAX_N = <span class="number">2000</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">9999999</span>;</span><br><span class="line"><span class="keyword">int</span> a[MAX_N];</span><br><span class="line"><span class="keyword">int</span> dp[MAX_N];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	fill(dp, dp + n, INF);</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		*lower_bound(dp, dp + n, a[i]) = a[i];</span><br><span class="line"> </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; lower_bound(dp, dp + n, INF) - dp &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>赤裸裸的网络流题目。给定点数，边数，每条边的容量，以及源点，汇点，求最大流。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> G[<span class="number">300</span>][<span class="number">300</span>];</span><br><span class="line"><span class="keyword">int</span> Prev[<span class="number">300</span>]; <span class="comment">//路径上每个节点的前驱节点</span></span><br><span class="line"><span class="keyword">bool</span> Visited[<span class="number">300</span>];</span><br><span class="line"><span class="keyword">int</span> n, m; <span class="comment">//m是顶点数目，顶点编号从1开始 1是源，m是汇, n是边数</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="title">Augment</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> v;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">deque</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">	<span class="built_in">memset</span>(Prev, <span class="number">0</span>, <span class="keyword">sizeof</span>(Prev));</span><br><span class="line">	<span class="built_in">memset</span>(Visited, <span class="number">0</span>, <span class="keyword">sizeof</span>(Visited));</span><br><span class="line">	Prev[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	Visited[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	q.push_back(<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">bool</span> bFindPath = <span class="literal">false</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//用bfs寻找一条源到汇的可行路径</span></span><br><span class="line">	<span class="keyword">while</span> (!q.empty())&#123;</span><br><span class="line">		v = q.front();</span><br><span class="line">		q.pop_front();</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++)&#123;</span><br><span class="line">			<span class="keyword">if</span> (G[v][i] &gt; <span class="number">0</span> &amp;&amp; Visited[i] == <span class="number">0</span>)&#123;</span><br><span class="line">				<span class="comment">//必须是依然有容量的边，才可以走</span></span><br><span class="line">				Prev[i] = v;</span><br><span class="line">				Visited[i] = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span> (i == m)&#123;</span><br><span class="line">					bFindPath = <span class="literal">true</span>;</span><br><span class="line">					q.clear();</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span></span><br><span class="line">					q.push_back(i);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	<span class="keyword">if</span> (!bFindPath)</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> nMinFlow = <span class="number">999999999</span>;</span><br><span class="line">	v = m;</span><br><span class="line">	<span class="comment">//寻找源到汇路径上容量最小的边，其容量就是此次增加的总流量</span></span><br><span class="line">	<span class="keyword">while</span> (Prev[v])&#123;</span><br><span class="line">		nMinFlow = min(nMinFlow, G[Prev[v]][v]);</span><br><span class="line">		v = Prev[v];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//沿此路径添加反向边，同时修改路径上每条边的容量</span></span><br><span class="line">	v = m;</span><br><span class="line">	<span class="keyword">while</span> (Prev[v])&#123;</span><br><span class="line">		G[Prev[v]][v] -= nMinFlow;</span><br><span class="line">		G[v][Prev[v]] += nMinFlow;</span><br><span class="line">		v = Prev[v];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> nMinFlow;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m))&#123;</span><br><span class="line">		<span class="comment">//m是顶点数目，顶点编号从1开始</span></span><br><span class="line">		<span class="keyword">int</span> i, j, k;</span><br><span class="line">		<span class="keyword">int</span> s, e, c;</span><br><span class="line">		<span class="built_in">memset</span>(G, <span class="number">0</span>, <span class="keyword">sizeof</span>(G));</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>, &amp;s, &amp;e, &amp;c);</span><br><span class="line">			G[s][e] += c; <span class="comment">//两点之间可能有多条边</span></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">int</span> MaxFlow = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">unsigned</span> <span class="keyword">int</span> aug;</span><br><span class="line"> </span><br><span class="line">		<span class="keyword">while</span> (aug = Augment())</span><br><span class="line">			MaxFlow += aug;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; MaxFlow &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -475,7 +514,9 @@
           
             <a href="/tags/ACM/" rel="tag"><i class="fa fa-tag"></i> ACM</a>
           
-            <a href="/tags/动态规划/" rel="tag"><i class="fa fa-tag"></i> 动态规划</a>
+            <a href="/tags/Graph/" rel="tag"><i class="fa fa-tag"></i> Graph</a>
+          
+            <a href="/tags/网络流/" rel="tag"><i class="fa fa-tag"></i> 网络流</a>
           
         </div>
       
@@ -488,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/09/ACM/DP/动态规划—最长公共子序列问题 HDU-1159 Common Subsequence/" rel="next" title="动态规划—最长公共子序列问题 HDU-1159 Common Subsequence">
-                <i class="fa fa-chevron-left"></i> 动态规划—最长公共子序列问题 HDU-1159 Common Subsequence
+              <a href="/2018/08/05/ACM/Thinking/贪心 POJ - 2376 ​​​​​​​Cleaning Shifts/" rel="next" title="贪心 &nbsp;POJ-2376 ​​​​​​​&nbsp;Cleaning Shifts">
+                <i class="fa fa-chevron-left"></i> 贪心 &nbsp;POJ-2376 ​​​​​​​&nbsp;Cleaning Shifts
               </a>
             
           </div>
@@ -498,8 +539,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/29/Windows/ftp打开方式更改为资源管理器方法/" rel="prev" title="ftp打开方式更改为资源管理器方法">
-                ftp打开方式更改为资源管理器方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/05/ACM/Thinking/BFS Aizu - 0558 ​​​​​​​Cheese/" rel="prev" title="BFS:图的最短路径 &nbsp;Aizu-0558 &nbsp;​​​​​​​Cheese">
+                BFS:图的最短路径 &nbsp;Aizu-0558 &nbsp;​​​​​​​Cheese <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -698,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">动态规划—最长上升子序列问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">最长上升子序列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Sample Output</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.4.</span> <span class="nav-text">方法二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络流—Edmonds-Karp-最短增广路算法-最大流"><span class="nav-number">1.</span> <span class="nav-text">网络流—Edmonds-Karp 最短增广路算法(最大流)</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#网络流—Edmonds-Karp-最短增广路算法-最大流"><span class="nav-number"></span> <span class="nav-text">网络流—Edmonds-Karp 最短增广路算法(最大流)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">0.0.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">0.0.2.</span> <span class="nav-text">复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">例题： Drainage Ditches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.0.1.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.0.2.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.0.3.</span> <span class="nav-text">Sample Input</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.0.4.</span> <span class="nav-text">Sample Output</span></a></li></ol></li></div>
             
 
           </div>
