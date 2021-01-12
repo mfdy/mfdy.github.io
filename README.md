@@ -1,3 +1,3 @@
-# Welcome To Visit My Blog
+# 欢迎访问我的个人博客
 
-Address: <a href="https://mfdy.tech">https://mfdy.tech</a>
+原博客已停止更新，请访问新博客地址：http://mfdycs.cn
